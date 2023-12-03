@@ -40,3 +40,8 @@ extension Application {
 
     public var resend: Resend { .init(application: self) }
 }
+
+public extension Application.Resend {
+    static var email = ResendClient.email
+    static var domain = ResendClient.domains
+}
