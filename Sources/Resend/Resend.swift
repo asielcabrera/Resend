@@ -33,8 +33,8 @@ extension Application {
 
         fileprivate let application: Application
 
-        public var client: ResendClient {
-            .init(httpClient: self.application.http.client.shared, apiKey: self.storage.apiKey)
+        public var client: ResendClient.Type {
+            return ResendClient.self
         }
     }
 
