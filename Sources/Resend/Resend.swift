@@ -28,6 +28,7 @@ extension Application {
             }
             
             self.application.storage[Key.self] = .init(apiKey: apiKey)
+            ResendClient.initialized(httpClient: self.application.http.client.shared, apiKey: self.storage.apiKey)
         }
 
         fileprivate let application: Application
